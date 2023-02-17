@@ -14,9 +14,11 @@ int main(void)
 		if (number == 9)
 			putchar(number + '0');
 		else
+		{
 			putchar(number + '0');
-		        putchar(',');
-		        putchar(' ');
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	return (0);
 }
