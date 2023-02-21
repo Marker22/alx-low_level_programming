@@ -10,36 +10,41 @@
 
 int main(void)
 {
-	unsigned long int i, j, k, a, b, c, d;
+	int i;
+	unsigned long int a = 0, b = 1, sum;
+	unsigned long int j, k, l, m;
+	unsigned long int first, second;
 
-	j = 1;
-	k = 2;
-
-	printf("%lu", j);
-
-	for (i = 1; i < 91; i++)
+	for (i = 0; i < 92; i++)
 	{
-		printf(", %lu", k);
-		k = k + j;
-		j = k - j;
+		sum = a + b;
+		printf("%lu, ", sum);
+		a = b;
+		b = sum;
 	}
-
-	a = j / 10000000000;
-	b = j % 10000000000;
-	c = k / 10000000000;
-	d = k % 10000000000;
-
-	for (i = 92; i < 99; ++i)
+	j = a / 10000000000;
+	l = b / 10000000000;
+	k = a % 10000000000;
+	m = b % 10000000000;
+	for (i = 93; i < 98; i++)
 	{
-		printf(", %lu", c + (d / 10000000000));
-		printf("%lu", d % 10000000000);
-		d = d + a;
-		a = c - a;
-		d = d + b;
-		c = d - b;
+		first = j + l;
+		second = k + m;
+		if (k + m > 9999999999)
+		{
+			first += 1;
+			second %= 10000000000;
+		}
+		printf("%lu%lu", first, second);
+		if (i != 98)
+		{
+			printf(",");
+			j = l;
+			k = m;
+			l = first;
+			m = second;
+		}
 	}
-
 	printf("\n");
-
 	return (0);
 }
