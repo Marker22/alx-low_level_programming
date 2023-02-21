@@ -13,7 +13,7 @@ int main(void)
 	int count;
 
 	printf("%lu, %lu, ", a, b);
-	for (count = 1; count < 98; count++)
+	for (count = 2; count < 98; count++)
 	{
 		if (j + b > 10000000000 || a > 0 || i > 0)
 		{
