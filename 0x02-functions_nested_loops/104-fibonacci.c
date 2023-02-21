@@ -37,13 +37,11 @@ int main(void)
 		}
 		printf("%lu%lu", first, second);
 		if (i != 98)
-		{
-			printf(",");
-			j = l;
-			k = m;
-			l = first;
-			m = second;
-		}
+		printf(",");
+		j = l;
+		k = m;
+		l = first;
+		m = second;
 	}
 	printf("\n");
 	return (0);
