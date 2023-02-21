@@ -13,9 +13,9 @@ int main(void)
 	int count;
 
 	printf("%lu, %lu, ", a, b);
-	for (count = 2; count < 98; count++)
+	for (count = 1; count < 98; count++)
 	{
-		if (a + b > 10000000000 || a > 0 || i > 0)
+		if (j + b > 10000000000 || a > 0 || i > 0)
 		{
 			first = (j + b) / 10000000000;
 			second = (j + b) % 10000000000;
