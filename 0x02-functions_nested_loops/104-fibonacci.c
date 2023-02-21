@@ -22,18 +22,18 @@ int main(void)
 		a = b;
 		b = sum;
 	}
-	j = a / 10000000000;
-	l = b / 10000000000;
-	k = a % 10000000000;
-	m = b % 10000000000;
+	j = a / 1000000000;
+	l = b / 1000000000;
+	k = a % 1000000000;
+	m = b % 1000000000;
 	for (i = 93; i < 98; i++)
 	{
 		first = j + l;
 		second = k + m;
-		if (k + m > 9999999999)
+		if (k + m > 999999999)
 		{
 			first += 1;
-			second %= 10000000000;
+			second %= 1000000000;
 		}
 		printf("%lu%lu", first, second);
 		if (i != 98)
