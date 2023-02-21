@@ -9,21 +9,20 @@
 
 int main(void)
 {
-	long int sum_of_multiples_3, sum_of_multiples_5, sum_of_multiples_3_5;
 	int i;
 
-	sum_of_muitiples_3 = 0;
-	sum_of_multiples_5 = 0;
-	sum_of_multiples_3_5 = 0;
+	long int sum_of_muitiples_3 = 0;
+	long int sum_of_multiples_5 = 0;
+	long int sum_of_multiples_3_5 = 0;
 
 	for (i = 0; i < 1024; ++i)
 	{
 		if ((i % 3) == 0)
 		{
-			sum_of_multiples_3 + = i;
+			sum_of_multiples_3 += i;
 		} else if ((i % 5) == 0)
 		{
-			sum_of_multiples_5 + = i;
+			sum_of_multiples_5 += i;
 		}
 	}
 	sum_of_multiples_3_5 = sum_of_multiples_3 + sum_of_multiples_5;
