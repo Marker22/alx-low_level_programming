@@ -4,31 +4,31 @@
  * main - main block
  * Description: Find and print the first 98 fib numbers starting with 1 and 2.
  * Numbers should be coma and space separated.
- * Return:(0) success
+ * Return: 0
  */
 int main(void)
 {
-	unsigned long int i = 0, j = 1, a = 0, b = 2;
-	unsigned long int first, second, third;
+	unsigned long int fr1 = 0, bk1 = 1, fr2 = 0, bk2 = 2;
+	unsigned long int hold1, hold2, hold3;
 	int count;
 
-	printf("%lu, %lu, ", j, b);
+	printf("%lu, %lu, ", bk1, bk2);
 	for (count = 2; count < 98; count++)
 	{
-		if (j + b > LARGEST || a > 0 || i > 0)
+		if (bk1 + bk2 > LARGEST || fr2 > 0 || fr1 > 0)
 		{
-			first = (j + b) / LARGEST;
-			second = (j + b) % LARGEST;
-			third = i + a + first;
-			i = a, a = third;
-			j = b, b = second;
-			printf("%lu%010lu", a, b);
+			hold1 = (bk1 + bk2) / LARGEST;
+			hold2 = (bk1 + bk2) % LARGEST;
+			hold3 = fr1 + fr2 + hold1;
+			fr1 = fr2, fr2 = hold3;
+			bk1 = bk2, bk2 = hold2;
+			printf("%lu%010lu", fr2, bk2);
 		}
 		else
 		{
-			second = a + b;
-			a = b, b = second;
-			printf("%lu", b);
+			hold2 = bk1 + bk2;
+			bk1 = bk2, bk2 = hold2;
+			printf("%lu", bk2);
 		}
 		if (count != 97)
 			printf(", ");
