@@ -11,7 +11,7 @@
 int main(void)
 {
 	int i;
-	unsigned long int a = 1, b = 2, sum;
+	unsigned long int a = 0, b = 1, sum;
 	unsigned long int j, k, l, m;
 	unsigned long int first, second;
 
